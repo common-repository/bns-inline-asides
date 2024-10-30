@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BNS Inline Asides\n"
+"POT-Creation-Date: 2015-05-11 19:44-0500\n"
+"PO-Revision-Date: 2015-05-11 19:46-0500\n"
+"Last-Translator: Edward Caissie <edward.caissie@gmail.com>\n"
+"Language-Team: Edward Caissie <edward.caissie@gmail.com>\n"
+"Language: en_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: bns-inline-asides.php:94
+msgid ""
+"BNS Early Adopter requires WordPress version 3.6 or newer. <a href=\"http://"
+"codex.wordpress.org/Upgrading_WordPress\">Please Update!</a>"
+msgstr ""
+"BNS Early Adopter requires WordPress version 3.6 or newer. <a href=\"http://"
+"codex.wordpress.org/Upgrading_WordPress\">Please Update!</a>"
+
+#: bns-inline-asides.php:245
+#, php-format
+msgctxt "%s is a PHP replacement variable"
+msgid "To see the <em>%s</em> click here."
+msgstr "To see the <em>%s</em> click here."
+
+#: bns-inline-asides.php:246
+#, php-format
+msgctxt "%s is a PHP replacement variable"
+msgid "To hide the <em>%s</em> click here."
+msgstr "To hide the <em>%s</em> click here."

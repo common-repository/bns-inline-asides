@@ -1,0 +1,203 @@
+/**
+ * This file is part of BNS Inline Asides plugin
+ * Last revised at version 1.0.2
+ *
+ * Copyright 2011-2015  Edward Caissie  (email : edward.caissie@gmail.com)
+ *
+ * BNS Inline Asides is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License, version 2, as published
+ * by the Free Software Foundation.
+ *
+ * You may NOT assume that you can use any other version of the GPL.
+ *
+ * BNS Inline Asides is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, write to:
+ *
+ *      Free Software Foundation, Inc.
+ *      51 Franklin St, Fifth Floor
+ *      Boston, MA  02110-1301  USA
+ *
+ * @version 1.0
+ * @date    April 3, 2013
+ * Added style definitions for "Hat Tip" type
+ *
+ * @version 1.0.1
+ * @date    July 2013
+ * Added new aside type: Correction
+ *
+ * @version 1.0.2
+ * @date	August 2013
+ * Added new aside type: Update
+ *
+ * @version	1.2
+ * @date	November 2014
+ * Added better demarcation points between types
+ */
+
+span.close-aside, span.open-aside {
+	border-bottom: thin solid black;
+	cursor: help;
+	display: block;
+	text-align: right;
+}
+
+.aside-toggler.closed .close-aside,
+.aside-toggler.open .open-aside,
+.bnsia.aside.closed,
+blockquote.aside.closed {
+	display: none;
+}
+
+/** Default - no CSS element chosen */
+.bnsia.aside {
+	padding: 10px;
+}
+
+/** Remove any background image from blockquote if it exists */
+/** blockquote.aside { background-image: none; } */
+
+/** Pre-Defined BNS Inline Aside Types -------------------------------------- */
+/** Type: Note -------------------------------------------------------------- */
+.open-aside.note {
+	background-color: #c0c0c0;
+}
+
+.bnsia.aside.note,
+blockquote.aside.note {
+	/** Default text color on Light Grey background - Sample Only */
+	background-color: #c0c0c0;
+}
+
+/** Type: Rant -------------------------------------------------------------- */
+.open-aside.rant {
+	background-color: #ff0000;
+	color: #000;
+}
+
+.bnsia.aside.rant,
+blockquote.aside.rant {
+	/**
+	 * Black text on a red background with a non-repeating flame graphic for
+	 * added emphasis - Sample Only
+	 */
+	background: #ff0000 url('../images/flame.png') no-repeat left;
+	color: #000;
+}
+
+/** Type: Changelog --------------------------------------------------------- */
+.open-aside.changelog {
+	background-color: #c0c0c0;
+}
+
+.bnsia.aside.changelog,
+blockquote.aside.changelog {
+	/** Default font-family as monospace - Sample Only */
+	font-family: monospace;
+}
+
+/** Type: Footnote ---------------------------------------------------------- */
+.open-aside.footnote {
+	background-color: #c0c0c0;
+}
+
+.bnsia.aside.footnote,
+blockquote.aside.footnote {
+	background-color: #c0c0c0;
+}
+
+.bnsia.aside.footnote ol,
+blockquote.aside.footnote ol {
+	list-style-type: lower-roman;
+}
+
+/** Type: Nota Bene -or- NB ------------------------------------------------- */
+.open-aside.nb, .open-aside.nota-bene {
+	background-color: #c0c0c0;
+}
+
+.bnsia.aside.nb, .bnsia.aside.nota-bene,
+blockquote.aside.nb, blockquote.aside.nota-bene {
+	background-color: #c0c0c0;
+	font-style: italic;
+}
+
+/** Type: Hat Tip ----------------------------------------------------------- */
+.open-aside.hat-tip {
+}
+
+.bnsia.aside.hat-tip,
+blockquote.aside.hat-tip {
+	/**
+	 * Black text on a transparent background with a non-repeating hat graphic
+	 * for added emphasis
+	 */
+	background: url('../images/hat.png') no-repeat left transparent;
+	color: #000;
+}
+
+/** Type: Correction -------------------------------------------------------- */
+.open-aside.correction {
+}
+
+.bnsia.aside.correction,
+blockquote.aside.correction {
+	/**
+	 * Black text on a transparent background with a non-repeating checkbox
+	 * graphic for added emphasis
+	 */
+	background: url('../images/checkmark.svg') no-repeat left transparent;
+	background-size: auto 100%;
+	color: #000;
+}
+
+/** Type: Update ------------------------------------------------------------ */
+.open-aside.update {
+}
+
+.bnsia.aside.update,
+blockquote.aside.update {
+	/**
+	 * Black text on a transparent background with a non-repeating circular
+	 * arrow graphic for added emphasis
+	 */
+	background: url('../images/update.png') no-repeat left transparent;
+	background-size: auto 100%;
+	color: #000;
+}
+
+/** ------------------------------------------------------------------------- */
+
+/**
+ * BNS Inline Asides Custom Types
+ *
+ * To add your own custom aside type styles you might consider creating a new
+ * stylesheet in this plugin folder using the name: bnsia-custom-types.css
+ *
+ * Simply follow the "Sample" element formats above for simple styles. The
+ * plugin will create a class name from the custom aside type you use in your
+ * shortcode.
+ * For example: [aside type="bacon"] will generate CSS classes similar to these:
+ *
+ *  .open-aside.bacon
+ *  .close-aside.bacon
+ *  .bnsia.aside.bacon
+ *  blockquote.aside.bacon
+ *
+ * NB: Make sure to use the correct prefix, the default is no prefix.
+ *
+ * This method can also be used to over-write the Pre-Defined Aside Types styles
+ * as the bnsia-custom-types.css file loads after the main stylesheet.
+ *
+ * The bnsia-custom-types.css stylesheet will not be over-written by updates.
+ *
+ * Enjoy!
+ *
+ *
+ * Edward Caissie
+ * Cais | edward.caissie@gmail.com
+ */
